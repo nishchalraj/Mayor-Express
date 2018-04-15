@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signUp">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="27dp"
+        android:text="Sign Up"
+        android:textColor="@color/colorBlack"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="99dp"
+        android:text="Name"
+        android:textColor="@color/colorBlack"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="346dp"
+        android:textStyle="italic"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView5"
+        android:ems="10"
+        android:hint="Name"
+        android:backgroundTint="@color/colorApp"
+        android:textCursorDrawable="@color/colorApp"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="193dp"
+        android:text="Mobile Number"
+        android:textColor="@color/colorBlack"/>
+
+    <EditText
+        android:id="@+id/edit_mobile"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView6"
+        android:ems="10"
+        android:backgroundTint="@color/colorApp"
+        android:textCursorDrawable="@color/colorApp"
+        android:inputType="phone"
+        android:hint="Mobile Number"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginBottom="201dp"
+        android:text="Email"
+        android:textColor="@color/colorBlack"/>
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="346dp"
+        android:backgroundTint="@color/colorApp"
+        android:textCursorDrawable="@color/colorApp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="-201dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Email"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="66dp"
+        android:background="@color/colorApp"
+        android:text="Sign Up" />
+
+</RelativeLayout>

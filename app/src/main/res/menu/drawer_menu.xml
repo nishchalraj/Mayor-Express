@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_services"
+            android:icon="@drawable/services"
+            android:title="Services">
+        </item>
+        <item android:id="@+id/nav_calls"
+            android:icon="@drawable/call"
+            android:title="My Calls">
+        </item>
+        <item android:id="@+id/nav_lang"
+            android:icon="@drawable/language"
+            android:title="Language">
+        </item>
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/nav_about"
+                    android:icon="@drawable/about"
+                    android:title="About">
+                </item>
+                <item android:id="@+id/nav_support"
+                    android:icon="@drawable/support"
+                    android:title="Support">
+                </item>
+
+            </group>
+        </menu>
+    </item>
+
+</menu>
