@@ -1,5 +1,6 @@
 package com.android.root.mayorexpress;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +9,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class CustomGrid extends BaseAdapter{
     private Context mContext;
     private final int[] Imageid;
 
-    public CustomGrid(Context c,int[] Imageid ) {
+    public CustomGrid(Context c, int[] Imageid ) {
         mContext = c;
         this.Imageid = Imageid;
     }
