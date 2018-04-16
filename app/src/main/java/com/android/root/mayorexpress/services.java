@@ -1,6 +1,7 @@
 package com.android.root.mayorexpress;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
@@ -66,7 +67,12 @@ public class services extends Fragment {
             grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Toast.makeText(getActivity(), "You Clicked at " + imageId[+position], Toast.LENGTH_SHORT).show();
+                    Intent j = new Intent(getActivity(),subCategory.class);
+
+                    //passing value of icon to other sctivity to set as title
+                    j.putExtra("itemClicked",String.valueOf(position));
+                    startActivity(j);
+                    Toast.makeText(getActivity(), "You Clicked at " + /*imageId[+position]*/ position, Toast.LENGTH_SHORT).show();
                 }
             });
         }

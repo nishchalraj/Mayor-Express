@@ -51,7 +51,9 @@
             android:name=".services"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
-        <activity android:name=".subCategory"></activity>
+        <activity android:name=".subCategory"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
