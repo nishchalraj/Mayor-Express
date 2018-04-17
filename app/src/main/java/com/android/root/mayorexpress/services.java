@@ -2,8 +2,10 @@ package com.android.root.mayorexpress;
 
 import android.content.ClipData;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -51,6 +53,10 @@ public class services extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_services,container,false);
 
+        //defining shared preferences
+        SharedPreferences mSettings = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        final SharedPreferences.Editor editor = mSettings.edit();
+
         //for image slider
         viewPager = (ViewPager)view.findViewById(R.id.viewPager);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getActivity());
@@ -70,7 +76,8 @@ public class services extends Fragment {
                     Intent j = new Intent(getActivity(),subCategory.class);
 
                     //passing value of icon to other sctivity to set as title
-                    j.putExtra("itemClicked",String.valueOf(position));
+                    editor.putString("itemClicked",String.valueOf(position));
+                    editor.apply();
                     startActivity(j);
                     Toast.makeText(getActivity(), "You Clicked at " + /*imageId[+position]*/ position, Toast.LENGTH_SHORT).show();
                 }

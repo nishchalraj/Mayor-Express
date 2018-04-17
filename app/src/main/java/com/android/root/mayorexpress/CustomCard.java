@@ -2,10 +2,17 @@ package com.android.root.mayorexpress;
 
 public class CustomCard {
 
-    int image;
-    String w;//work
-    String d1;//description1
-    String d2;//description2
+    private int image;
+    private String w;//work
+    private String d1;//description1
+    private String d2;//description2
+
+    public CustomCard(int image, String w, String d1, String d2) {
+        this.image = image;
+        this.w = w;
+        this.d1 = d1;
+        this.d2 = d2;
+    }
 
     public int getImage() {
         return image;
