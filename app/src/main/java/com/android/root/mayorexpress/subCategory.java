@@ -44,10 +44,10 @@ public class subCategory extends AppCompatActivity {
         scg= (GridView) findViewById(R.id.sub_cat_grid);
         customCardAdapter = new CustomCardAdapter(this,customcard);
 
-        CustomCard cc=new CustomCard(img,w,d1,d2);
-
         for(int i=0;i<50;i++)
         {
+            CustomCard cc=new CustomCard(img,w,d1,d2);
+
             cc.setW("Work " + i);
             cc.setD1("Description "+i+ " 1");
             cc.setD2("Description "+i+ " 2");
