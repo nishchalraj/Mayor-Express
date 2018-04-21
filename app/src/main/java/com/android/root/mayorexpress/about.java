@@ -8,12 +8,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 public class about extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_about,container,false);
+
+        View view = inflater.inflate(R.layout.activity_about,container,false);
+
+        WebView awv = (WebView)view.findViewById(R.id.about_web_view);
+        awv.loadUrl("https://mayorexpress.in/");
+
+        return view;
     }
 }
